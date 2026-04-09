@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  
+  --primary-dark: #001D39;
+  --primary: #0A4174;
+  --primary-light: #49769F;
+
+  --secondary: #4E8EA2;
+  --secondary-light: #6EA2B3;
+
+  --accent: #7BBDE8;
+  --background-light: #BDD8E9;
+}
+
