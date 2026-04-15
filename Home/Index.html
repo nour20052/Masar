@@ -1,40 +1,346 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/all.min.css">
-  
-    <title>مسار — منصة التعلم المهني</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    
+    <title>Masar</title>
 </head>
 <body>
-     <div id="nav-container"></div>
-
-     
- <section class="hero">
-    <div class="bg-glow-1"></div>
-    <div class="bg-glow-2"></div>
-    <div class="container">
-      <div class="hero-badge">
-        <div class="hero-badge-dot"></div>
-        منصة التعلم المهني الموجَّه
-      </div>
-      <h1>
-        من أين تبدأ؟<br>
-        <em>مسار</em> يحدد لك الطريق
-      </h1>
-      <p>لا مزيد من الكورسات العشوائية. مسار يبني لك خريطة طريق شخصية مبنية على مستواك الحقيقي وتوصلك لهدفك المهني بخطوات واضحة ومقاسة.</p>
-      <div class="hero-actions">
-        <a href="tracks.html" class="btn btn-primary">اختر تراكك الآن</a>
-        <a href="roadmap.html" class="btn btn-secondary">استعرض خريطة المهارات</a>
-      </div>
+ <header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container d-flex ">
+      <a href="/Home/Index.html" class="navbar-brand ">
+        <div class="logo1">M</div>
+        <div class="logo2">Masar</div>
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse justify-content-end" id="nav">
+        <div class="d-flex gap-2 mt-3 mt-lg-0">
+          <a href="/Account/Login.html" class=" nav-link login-btn "> <p> Login </p></a>
+          <a href="/Account/Register.html" class="nav-link signup-btn"><p>Sing Up</p></a>
+       </div>
+       </div>
     </div>
-  </section>
+  </nav>
+ </header>
 
+<section class="hero container">
+  <div class="d-flex title  ">
+    <div class="pulsing-dot"></div>
+    <div class="title-text"><p>Career Path Platform</p></div>
+  </div>
+  <div class="d-flex">
+  <div class="hero-title mt-3">
+    <h1>Where do you start?</h1>
+    <h1><span>Masar</span> maps your path </h1>
+    <p class="text-muted mt-3 mb-4">No more random courses or unclear roadmaps.
+Masar builds you a personalized roadmap based on your real level, guiding you to your career goal with clear and measurable steps.</p>
+  </div>
+  <div class="floating-container">
+    <img src="/images/hero.svg" alt="roadmap">
+    <div class="shadow"></div>
+  </div>
+  </div>
+  <div class="hero-btns mb-5 ">
+  <a href="/Account/Register.html" class=" nav-link hero-btn1 d-flex "> <p> Get Started </p></a>
+  <a href="#problem" class="nav-link hero-btn2 d-flex"><p>Learn more about Masar</p></a>
+  </div>
+  <div class="d-flex justify-content-between container mt-4 gap-2 ">
+    <div>
+    <div class="d-flex">
+    <h1 class="counter fw-bolder" data-target="10">0</h1>
+    <h1>+</h1>
+    </div>
+    <p class="text-muted">Career Paths</p>
+    </div>
+    <div>
+      <div class="d-flex">
+    <h1 class="counter fw-bolder" data-target="5000">0</h1>
+    <h1>+</h1>
+    </div>
+    <p  class="text-muted">Registered Students</p>
+    </div>
+    <div>
+      <div class="d-flex gap-1">
+    <h1 class="counter fw-bolder" data-target="90">0</h1>
+    <h1 class="fw-bold">%</h1>
+    </div>
+    <p  class="text-muted">Completed Their Path Successfully</p>
+    </div>
+    <div>
+    <div class="d-flex gap-1">
+    <h1 class="counter fw-bolder" data-target="+450">0</h1>
+    <h1>+</h1>
+    </div>
+    <p  class="text-muted">Project Ideas Ready for Implementation</p>
+    </div>
+</div>
+</section>
+<section class="problems mt-5 " id="problem">
+  <div class="container pt-3">
+  <div class="d-flex  problem">
+    <div class="problem-pulsing-dot"></div>
+    <div class="problem-text"><p>problems</p></div>
+  </div>
+  <h2 class="mt-4 mb-3">Random learning does not lead to real results</h2>
+  <p class="text-muted">Students spend a lot of time searching without understanding their current level or clearly defining the next step.</p>
+  <div class="cards row">
+    <ul class="col-lg-6 col-md-6 col-11">
+      <li>
+       <div class=" card_error error " data-aos="fade-right" data-aos-duration="1000" >
+        <div class="icon">✖</div>
+        <h5 class="pt-2">No clear roadmap</h5>
+        <p class="text-muted">Learning without logical order makes it hard to know what to study first.</p>
+      </div>
+      </li>
+      <li>
+          <div class="card_error error" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">
+        <div class="icon">✖</div>
+        <h5 class="pt-2">No real measurement</h5>
+        <p class="text-muted">Students cannot accurately assess their level or weaknesses.</p>
+      </div>
+      </li>
+      <li>
+         <div class=" card_error error " data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+        <div class="icon">✖</div>
+        <h5 class="pt-2">Wasted time</h5>
+        <p class="text-muted">Hours of learning without a clear goal or proper plan.</p>
+      </div>
+      </li>
+    </ul>
+    <ul class="col-lg-6 col-md-6 col-11">
+      <li>
+        <div class=" card_success success " data-aos="fade-left" data-aos-duration="1000" >
+        <div class="icon">✔</div>
+        <h5 class="pt-2">Personalized Skill Tree</h5>
+        <p class="text-muted">A structured learning path based on your goals, where each step leads to the next.</p>
+      </div>
+      </li>
+      <li>
+         <div class="card_success success " data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50">
+        <div class="icon">✔</div>
+        <h5 class="pt-2">Accurate assessments</h5>
+        <p class="text-muted">Tests and practical projects measure your level before moving to the next stage.</p>
+      </div>
+      </li>
+      <li>
+        <div class=" card_success success "data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+        <div class="icon">✔</div>
+        <h5 class="pt-2">Progress tracking</h5>
+        <p class="text-muted">A dashboard shows your progress, strengths, and weaknesses continuously.</p>
+      </div>
+      </li>
+    </ul>
 
+      </div>
+      </div>
+</section>
+<section class="steps container mt-5 mb-3 ">
+  <h2 class=" mb-2 col-11">Your journey to changing your career path in just 3 steps</h2>
+  <p class="text-muted mb-4">From choosing a goal to mastery, Masar supports you every step of the way.</p>
+  <div class="row justify-content-center">
+  <div class="card-step col-lg-10 col-md-10 col-10 " data-aos="fade-left" data-aos-duration="1000" >
+    <div class="num">1</div>
+        <h5>Define your career goal</h5>
+        <p class="text-muted">Choose the track you want to master. The platform knows exactly what you need to learn.</p>
+      </div>
+  <div class=" card-step  col-lg-10 col-md-10 col-10 " data-aos="fade-left" data-aos-duration="1000" >
+        <div class="num">2</div>
+        <h5>Learn and prove your level</h5>
+        <p class="text-muted">Tests and practical projects after each skill. No progress unless you reach 90%.</p>
+      </div>
+  <div class=" card-step col-lg-10 col-md-10 col-10 " data-aos="fade-left" data-aos-duration="1000" >
+        <div class="num">3</div>
+        <h5>Track your progress and continue</h5>
+        <p class="text-muted">A detailed dashboard and a smart chatbot guide and motivate you at every stage.</p>
+      </div>       
+  </div>
+</section>
+<section class="cv">
+  <div class="container ">
+ <div class="d-flex title-cv ">
+    <div class="title-text-cv"><p>Deliverables</p></div>
+  </div>
+  <div class="row ">
+  <div class="col-lg-5 col-md-7 col-12">
+  <h2 class="mb-2 mt-4">Build a job-winning resume </h2>
+  <p class="text-muted"> Focus on your experience. We handle formatting and structure.</p>
+  </div>
+  <div id="carouselExampleIndicators" class="carousel carousel-dark slide carousel-fade col-lg-6 col-md-12 col-12" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner ">
+    <div class="carousel-item active" data-bs-interval="4000">
+      <img src="/images/cv1.png" class="d-block w-100 " alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+      <img src="/images/cv2.png" class="d-block w-100 " alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+      <img src="/images/cv3.png" class="d-block w-100 " alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  </div>
+  </div>
+</section>
+<section class="who">
+  <div class="container ">
+   <h2 class=" mb-2 pt-5">Who are we targeting?</h2>
+   <p class="text-muted">Whether you are a student or a teacher, Masar provides what you need.</p>
+   <div class="row gap-3 justify-content-center ">
+   <div class="card-who col-5 col-md-5 col-10 mb-3 "  >
+    <div class="icon_who"><i class="fa-solid fa-user-graduate"></i></div>
+        <h3 class="">Student</h3>
+        <p class="text-muted">Follows the path, takes tests, learns from curated resources, and tracks progress in every skill visually.</p>
+      </div>
+  <div class=" card-who  col-5 col-md-5 col-10 mb-3" >
+        <div class="icon_who"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <h3 class="">Teacher</h3>
+        <p class="text-muted">Creates groups, sets roadmaps and tests, and monitors each student's level through a complete dashboard.</p>
+      </div>
+  
+      </div>
+       <div class=" card-start col-lg-7 col-md-10 col-10 mt-5 pb-5 " >
+        
+        <h2 class="text-center pb-2 pt-2">Let's grow together</h2>
+        <p class="text-muted text-center">Join thousands of learners who turned their time into a clear and structured career path.</p>
+        <div class="d-flex justify-content-center gap-4 pt-4">
+         <a href="/Account/Login.html" class=" nav-link login-btn d-flex "> <p> Login </p></a>
+        <a href="/Account/Register.html" class="nav-link signup-btn"><p>Sing Up</p></a>
+      </div>
+      </div>
+</div>
+
+</section>
+  <section class="mt-5 slider container-fluid">
+      <div class="cards-slider-wrapper">
+       <div class="container d-flex justify-content-between">
+        <h2 class="fw-bold col-lg-10 col-md-9 col-8">Loved & Trusted by Thousands of Users</h2>
+        
+        
+        <div class="slider-buttons    w-100">
+          <button class="slider-btn1   btn-close-white rounded-5 p-2 px-3 prevBtn">
+               Prev
+           </button>
+           <button class="slider-btn2 btn-close-white rounded-5 p-2 px-3 nextBtn">
+             Next
+           </button>
+        </div>
+         </div>
+           
+     
+  <div class="cards-viewport">
+      <div class="cards-track cardsTrack">
+      
+      <div class="card custom-card" style="width: 16rem;">
+  <div class="card-body">
+    <h5 class="Customer-title fw-bolder mb-4">Cameron Webster</h5>
+    <p class="mb-2"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i></p>
+    <p >I absolutely love this site. It has made a huge difference in my and so many of my friends' career paths.</p>
+     <p class="text-muted">Back-End Student</p>
+  </div>
+</div>
+
+      <div class="card custom-card" style="width: 16rem;">
+ 
+  <div class="card-body">
+      <h5 class="Customer-title fw-bolder mb-4 ">Dave Smith</h5>
+    <p class="mb-2"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i></p>
+  
+    <p >Couldn't be happier with this website. It had all the features you could possibly need and is an excellent CV website for anyone applying to jobs</p>
+    <p class="text-muted">Back-End Student</p>
+  </div>
+</div>
+
+      <div class="card custom-card" style="width: 16rem;">
+  <div class="card-body">
+    <h5 class="Customer-title fw-bolder mb-4 ">James Smith</h5>
+        <p class="mb-2"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i></p>
+    <p>Amazing! Wish I could give it more than 5 stars. Easy to use and free! No annoying CC details required or limited free time usage. Highly recommend!"</p>
+    <p class="text-muted">Instractor</p>
+    
+  </div>
+</div>
+
+      <div class="card custom-card" style="width: 16rem;">
+  
+  <div class="card-body">
+     <h5 class="Customer-title fw-bolder mb-4 ">James Doe</h5>
+        <p class="mb-2"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i></p>
+
+   
+     <p >This platform is exactly what I needed. The study plan is simple, clear, and helps me stay consistent and focused on my goals."</p>
+    <p class="text-muted">Front-end Student</p>
+    
+  </div>
+</div>
+
+      <div class="card custom-card" style="width: 16rem;">
+  
+  <div class="card-body">
+    <h5 class="Customer-title fw-bolder mb-4">Alicia Huston</h5>
+    <p class="mb-2"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i></p>
+    
+    <p>I love how everything is organized. The study plan is clear, practical, and perfect for staying on track without feeling overwhelmed.</p>
+    
+   
+    
+  </div>
+</div>
+
+      <div class="card custom-card" style="width: 16rem;">
+ 
+  <div class="card-body">
+    <h5 class="Customer-title fw-bolder mb-4 ">Jean Smith</h5>
+        <p class="mb-2"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i></p>
+
+    
+    <p>"This website made studying so much easier for me. The clear plan and guidance helped me stay disciplined and motivated."</p>
+   
+   
+   
+  </div>
+</div>
+
+      </div>
+      </div>
+      </div>
+     
+    </section>
+<footer >
+  <div class="container d-flex justify-content-between">
+ <a href="/Home/Index.html" class="navbar-brand">
+        <div class="logo1">M</div>
+        <div class="logo2"><p>Masar</p></div>
+      </a>
+  <p class="text-muted fw-light">All rights reserved — Masar 2025</p>
+  </div>
+</footer>
+ 
   <script src="/js/script.js"></script>
   <script src="/js/bootstrap.bundle.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+  AOS.init();
+</script>
 </body>
 </html>
