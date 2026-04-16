@@ -337,3 +337,129 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+
+////////////////////////////// OTP Verification Code Validation///////////////////////////////
+
+document.addEventListener('DOMContentLoaded', () => {
+    const otpInputs = document.querySelectorAll('.otp-input');
+    
+  
+    if (otpInputs.length === 0) return;
+
+    const hiddenInput = document.getElementById('fullCode');
+    const form = document.getElementById('verifyForm');
+    const errorMsg = document.getElementById('codeError');
+    const submitBtn = form?.querySelector('button[type="submit"]');
+    const resendBtn = document.getElementById('resendBtn');
+    const countdownEl = document.getElementById('countdown');
+    const timerContainer = document.getElementById('timerDisplay');
+
+    if (countdownEl) {
+        let timeLeft = 120;
+        const timerInterval = setInterval(() => {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            countdownEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+            if (timeLeft <= 30) {
+                countdownEl.style.color = '#dc2626';
+                timerContainer?.classList.add('urgent');
+            }
+
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                countdownEl.textContent = '00:00';
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Code Expired';
+                    submitBtn.style.opacity = '0.6';
+                    submitBtn.style.cursor = 'not-allowed';
+                }
+                if (resendBtn) {
+                    resendBtn.style.pointerEvents = 'auto';
+                    resendBtn.style.opacity = '1';
+                }
+                if (errorMsg) {
+                    errorMsg.textContent = 'Code expired. Please request a new one.';
+                    errorMsg.style.display = 'block';
+                }
+            }
+            timeLeft--;
+        }, 1000);
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get('email');
+    if (email) {
+        const emailSpan = document.getElementById('userEmail');
+        const hiddenEmail = document.getElementById('hiddenEmail');
+        if (emailSpan) emailSpan.textContent = email;
+        if (hiddenEmail) hiddenEmail.value = email;
+    }
+
+    function updateFullCode() {
+        let code = '';
+        otpInputs.forEach(inp => code += inp.value);
+        if (hiddenInput) hiddenInput.value = code;
+        if (errorMsg) errorMsg.style.display = 'none';
+        otpInputs.forEach(inp => inp.classList.remove('error'));
+    }
+
+    otpInputs.forEach((input, index) => {
+        input.addEventListener('keydown', (e) => {
+            if (['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+            if (!/^\d$/.test(e.key)) e.preventDefault();
+        });
+
+        input.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^0-9]/g, '');
+            if (e.target.value) {
+                e.target.classList.add('filled');
+                if (index < otpInputs.length - 1) otpInputs[index + 1].focus();
+            } else {
+                e.target.classList.remove('filled');
+            }
+            updateFullCode();
+        });
+
+        input.addEventListener('focus', () => input.select());
+
+        input.addEventListener('paste', (e) => {
+            e.preventDefault();
+            const pasteData = (e.clipboardData || window.clipboardData).getData('text').replace(/[^0-9]/g, '');
+            if (!pasteData) return;
+            pasteData.split('').forEach((char, i) => {
+                if (otpInputs[index + i]) {
+                    otpInputs[index + i].value = char;
+                    otpInputs[index + i].classList.add('filled');
+                }
+            });
+            const nextIdx = Math.min(index + pasteData.length, otpInputs.length - 1);
+            otpInputs[nextIdx].focus();
+            updateFullCode();
+        });
+    });
+
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            const code = hiddenInput?.value || '';
+            if (code.length !== 6 || !/^\d{6}$/.test(code)) {
+                e.preventDefault();
+                if (errorMsg) {
+                    errorMsg.textContent = 'Please enter a valid 6-digit code.';
+                    errorMsg.style.display = 'block';
+                }
+                otpInputs.forEach(inp => inp.classList.add('error'));
+                otpInputs[0].focus();
+            }
+        });
+    }
+
+    if (resendBtn) {
+        resendBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('Verification code resent!'); 
+        });
+    }
+});
