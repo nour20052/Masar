@@ -1,0 +1,18 @@
+<div class="chatbot-icon"  onclick="toggleChat()">
+        <i class="fa-solid fa-comment"></i>
+</div>
+<div class="chat-popup" id="chatPopup">
+  <div class="chat-header">
+    <span>Chat</span>
+    <button onclick="toggleChat()">✖</button>
+  </div>
+
+  <div class="chat-body" id="chatBody">
+    <p class="bot-msg">Hello 👋 How can I help you?</p>
+  </div>
+
+  <div class="chat-footer">
+    <input type="text" id="chatInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
