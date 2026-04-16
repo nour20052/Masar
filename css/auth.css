@@ -29,7 +29,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     direction: ltr;
     min-height: 100vh;
-    background: #f8f9fa57;
+    background:#f8f9fa;
     overflow-x: hidden;
 }
 
@@ -43,7 +43,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 60px;
+    padding: 30px;
     overflow: hidden;
 }
 .logo{
@@ -140,23 +140,6 @@ body {
 
 }
 
-/* .input-wrapper .lock-icon {
-    position: absolute; right: 16px; top: 50%;
-    transform: translateY(-50%); color: var(--text-light);
-    font-size: 16px; pointer-events: none; transition: color 0.3s;
-}
-.input-wrapper .form-control:focus ~ .lock-icon { color: var(--primary); }
-
-.input-wrapper .toggle-password {
-    position: absolute; left: 12px; top: 50%;
-    transform: translateY(-50%); cursor: pointer;
-    color: var(--text-light); background: none; border: none;
-    padding: 6px; font-size: 16px; transition: color 0.3s;
-    display: flex; align-items: center; justify-content: center;
-    width: 32px; height: 32px; border-radius: 50%;
-}
-.input-wrapper .toggle-password:hover { color: var(--primary); } */
-
 .form-row {
     display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
 }
@@ -231,7 +214,7 @@ body {
   //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .role-page {
     min-height: 100vh;
-    background: var(--bg-light);
+    background: #f8f9fa;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -244,7 +227,6 @@ body {
     width: 100%;
     text-align: center;
 }
-
 .role-container h1 {
     font-size: 2rem;
     font-weight: 800;
@@ -348,7 +330,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: var(--bg-light);
+    background: #f8f9fa;
 }
 
 .auth-single-card {
