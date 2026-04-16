@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Code - Massar</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="auth-page">
+    <div class="auth-single-page">
+        <div class="auth-single-card">
+            <div class="icon-circle">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h2>Check Your Email</h2>
+            <p>We sent a 6-digit verification code to <strong id="userEmail">your email</strong></p>
+            
+            <form id="verifyForm" action="ResetPassword.html" method="GET">
+                <input type="hidden" name="Email" id="hiddenEmail">
+                
+                <div class="otp-container">
+                    <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="one-time-code" required>
+                    <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="one-time-code" required>
+                    <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="one-time-code" required>
+                    <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="one-time-code" required>
+                    <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="one-time-code" required>
+                    <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="one-time-code" required>
+                </div>
+                <input type="hidden" name="Code" id="fullCode">
+
+                <div class="error-msg" id="codeError" style="display:none; color: #dc2626; font-size: 0.85rem; margin-bottom: 12px; text-align: center;"></div>
+
+                <button type="submit" class="btn-primary-auth">Verify Code</button>
+            </form>
+            
+<div class="timer-display" id="timerDisplay">
+            Code expires in: <span id="countdown">02:00</span>
+            </div>
+            <div class="resend-text">
+                Didn't receive the code? <a href="#" id="resendBtn">Resend</a>
+            </div>
+
+            <a href="ForgotPassword.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Email</a>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+      <script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>
