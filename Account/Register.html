@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="auth-page">
+    <div class="auth-layout">
+        <div class="brand-panel">
+            <div class="brand-content">
+                <div class="brand-logo">
+                    <div class="logo-icon">M</div>
+                    <span class="logo-text"><a class="logo" href="index.html">Massar</a></span>
+                </div>
+                <h1 class="brand-headline">Start Your<br><span>Learning Journey</span></h1>
+                <p class="brand-description">Join thousands of learners and teachers on Massar. Start from your real level and walk through well-planned steps toward your goal.</p>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <div class="feature-icon blue"><i class="fas fa-rocket"></i></div>
+                        <div><h4>Quick Start</h4><p>Sign up in under a minute and get started immediately</p></div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon blue"><i class="fas fa-shield-alt"></i></div>
+                        <div><h4>Secure & Private</h4><p>Your data is encrypted and protected with top standards</p></div>
+                    </div>
+                    <!-- <div class="feature-card">
+                        <div class="feature-icon blue"><i class="fas fa-gift"></i></div>
+                        <div><h4>Completely Free</h4><p>All core features are free, no hidden fees</p></div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="form-panel">
+            <div class="form-header">
+                <h2>Create Your Account</h2>
+                <p>Sign up now and start your learning journey with Massar.</p>
+            </div>
+
+            <div class="validation-summary"></div>
+            <div class="success-message"></div>
+
+            <form action="/Account/Register" method="POST">
+                <input type="hidden" id="Role" name="Role" value="">
+
+                <div class="row g-2 mb-2">
+                    <div class="col-6">
+                        <div class="input-wrapper">
+                            <input type="text" id="FirstName" name="FirstName" class="form-control" placeholder=" " required>
+                            <label class="floating-label" for="FirstName">First Name</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-wrapper">
+                            <input type="text" id="LastName" name="LastName" class="form-control" placeholder=" " required>
+                            <label class="floating-label" for="LastName">Last Name</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="email" id="Email" name="Email" class="form-control" placeholder=" " required>
+                    <label class="floating-label" for="Email">Email Address</label>
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="password" id="Password" name="Password" class="form-control" placeholder=" " required>
+                    <label class="floating-label" for="Password">Password</label>
+                </div>
+                            <div class="password-strength-meter" id="pwdStrengthMeter" style="display: none;">
+   
+   <ul class="requirements-list">
+    <li id="req-length" class="req-item"><span class="req-icon"></span> 8 characters minimum</li>
+    <li id="req-lower" class="req-item"><span class="req-icon"></span> One lowercase letter</li>
+    <li id="req-upper" class="req-item"><span class="req-icon"></span> One uppercase letter</li>
+    <li id="req-number" class="req-item"><span class="req-icon"></span> One number</li>
+    <li id="req-special" class="req-item"><span class="req-icon"></span> One special character</li>
+</ul>
+</div>
+                <div class="input-wrapper">
+                    <input type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control has-toggle" placeholder=" " required>
+                    <label class="floating-label" for="ConfirmPassword">Confirm Password</label>
+                </div>
+
+                <button type="submit" class="btn-primary-auth">Create Account</button>
+            </form>
+
+            <div class="divider">or sign up with</div>
+
+            <div class="social-btns">
+                <a href="/Account/ExternalLogin?provider=Google" class="social-btn google">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+                    Google
+                </a>
+                <a href="/Account/ExternalLogin?provider=Facebook" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+            </div>
+
+            <div class="form-footer">
+                Already have an account? <a href="Login.html" class="auth-link">Log In</a>
+            </div>
+        </div>
+    </div>
+
+     <div id="footer" class="footer-container">Footer</div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>

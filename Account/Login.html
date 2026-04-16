@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/auth.css">
+
+</head>
+<body class="auth-page">
+    
+ <div class="auth-layout"> 
+        <div class="brand-panel">
+            <div class="brand-content">
+                <div class="brand-logo">
+                    <div class="logo-icon">M</div>
+                    <span class="logo-text"><a class="logo" href="index.html">Massar</a></span>
+                </div>
+                <h1 class="brand-headline">Learn Smart,<br><span>Not Randomly</span></h1>
+                <p class="brand-description">Massar builds you a personalized roadmap from your real level to your career goal, step by step, in a logical and well-planned order.</p>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <div class="feature-icon blue"><i class="fas fa-code-branch"></i></div>
+                        <div><h4>Interactive Skill Tree</h4><p>A skill tree that gradually unlocks after proving each level</p></div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon blue"><i class="fas fa-chart-line"></i></div>
+                        <div><h4>Real Level Analysis</h4><p>Precise tests that measure your strengths and weaknesses in detail</p></div>
+                    </div>
+                    <!-- <div class="feature-card">
+                        <div class="feature-icon blue"><i class="fas fa-users"></i></div>
+                        <div><h4>Learning Groups</h4><p>Learn with your group and track progress with your instructor</p></div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="form-panel">
+            <div class="form-header">
+                <h2>Welcome Back</h2>
+                <p>Enter your credentials to continue from where you left off.</p>
+            </div>
+
+            <div class="validation-summary"></div>
+            <div class="success-message"></div>
+
+            <form action="/Account/Login" method="POST">
+                <div class="input-wrapper">
+                    <input type="email" id="Email" name="Email" class="form-control" placeholder=" " required>
+                    <label class="floating-label" for="Email">Email Address</label>
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="password" id="Password" name="Password" class="form-control" placeholder=" " required>
+                    <label class="floating-label" for="Password">Password</label>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-check-label d-flex align-items-center gap-2">
+                        <input type="checkbox" id="RememberMe" name="RememberMe" class="form-check-input">
+                        Remember me
+                    </label>
+                    <a href="ForgotPassword.html" class="auth-link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn-primary-auth">Log In</button>
+            </form>
+
+            <div class="divider">or continue with</div>
+
+            <div class="social-btns">
+                <a href="/Account/ExternalLogin?provider=Google" class="social-btn google">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+                    Google
+                </a>
+                <a href="/Account/ExternalLogin?provider=Facebook" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+            </div>
+
+            <div class="form-footer">
+                Don't have an account? <a href="RoleSelection.html" class="auth-link">Create an account</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="footer-container">Footer</div>
+    <script src="../js/script.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>

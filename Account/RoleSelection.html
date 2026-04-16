@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Role - Massar</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/auth.css">
+
+</head>
+<body class="auth-page">
+      <div class="role-page">
+
+        <div class="brand-logo" style="margin-bottom: 30px;">
+            <div class="logo-icon">M</div>
+            <span class="logo-text">Massar</span>
+            
+        </div>
+
+        <div class="role-container">
+            <h1>Choose Your Role on Massar </h1>
+            <p>Select how you want to learn so we can set up the right experience for you</p>
+
+            <div class="role-cards">
+                <div class="role-card student" role="button" tabindex="0"
+                     onclick="window.location.href='Register.html?role=Student'"
+                     onkeydown="if(event.key==='Enter') this.click()">
+                    <div class="role-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Student</h3>
+                    <p>
+                       Select a track aligned with your goals and follow a structured roadmap designed to guide your learning step by step.
+                      Assess your progress through evaluations and real-world projects, supported by AI-driven insights. <br> 
+                    </p>
+                    <button class="role-btn">
+                        Start as Student <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <p class="role-hint">✓ Free forever • Change role anytime from settings</p>
+                </div>
+
+                <div class="role-card teacher" role="button" tabindex="0"
+                     onclick="window.location.href='Register.html?role=Teacher'"
+                     onkeydown="if(event.key==='Enter') this.click()">
+                    <div class="role-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Instractor</h3>
+                    <p>
+                       Create and manage learning groups while designing structured roadmaps, assessments, and practical projects.
+                        Monitor student performance, evaluate progress, and provide continuous guidance to support their development.
+                    </p>
+                    <button class="role-btn">
+                        Start as Instractor <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <p class="role-hint">✓ Free to create groups • Full classroom tools</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="Login.html" class="back-link" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">
+                    <i class="fas fa-arrow-left"></i> Back to Log In
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="footer-container">Footer</div>
+
+<script src="../js/script.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>
