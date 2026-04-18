@@ -1,48 +1,80 @@
 
-   <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid d-flex ">
-      <a href="/Home/Index.html" class="navbar-brand ">
-        <div class="logo1">M</div>
-        <div class="logo2">Masar</div>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid d-flex ">
+
+    <a href="/Home/Index.html" class="navbar-brand d-flex ">
+      <div class="logo1">M</div>
+      <div class="logo2">Masar</div>
+    </a>
+
+    <button class="btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto d-flex align-items-center gap-4">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/Dashboard/dashboard.html">Dashboard</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/Track/track.html">Tracks</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/Roadmap/roadmap.html">Roadmap</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/Note/note.html">Notes</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/Quiz/start.html">Quiz</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/Groups/group.html">Groups</a>
+        </li>
+
+        
+        <li class="nav-item">
+          <div class="d-flex gap-3 align-items-center">
+
+           <a class="nav-link social notification" href="#" id="notificationBtn">
+            <i class="fa-solid fa-bell"></i>
+           <span class="notification-badge" id="notifCount"></span>
+           </a>  
+          <div class="dropdown">
+      <a class="nav-link social profile dropdown-toggle" href="#" role="button" 
+         data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-user"></i>
       </a>
-       <button class="btn  d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
-           <span class="navbar-toggler-icon"></span>
-       </button>
-  <div class="  collapse navbar-collapse">
-     <ul class="navbar-nav ms-auto  gap-4">
-                 <li class="nav-item ">
-                   <a class="nav-link  " href="/Dashboard/dashboard.html">Dashboard</a>
-                 </li>
-                 <li class="nav-item ">
-                    <a class="nav-link" href="/Track/track.html">Tracks</a>
-                 </li>
-                 <li>
-                    <a class="nav-link" href="/Roadmap/roadmap.html">Roadmap</a>
-                 </li>
-                 <li class="nav-item ">
-                    <a class="nav-link" href="/Note/note.html">Notes</a>
-                 </li>
-                 <li class="nav-item ">
-                    <a class="nav-link" href="/Quiz/start.html">Quiz</a>
-                 </li>
-                 <li class="nav-item ">
-                    <a class="nav-link" href="/Groups/group.html">Groups</a>
-                 </li>
-                 
-                 <li class="nav-item  ">
-                    <ul class="list-unstyled d-flex ">
-                   <li><a class="nav-link social" href=><p><i class="fa-brands fa-github"></i></p></a></li>
-                   <li><a class="nav-link social" href=><p><i class="fa-brands fa-github"></i></p></a></li>
-                   <li><a class="nav-link social" href="/Profile/profile.html"><p><i class="fa-brands fa-square-linkedin"></i></p></a></li>
-                   </ul>
-                 </li>
-            
-               </ul>
-  </div>
+      
+      <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+        <li>
+          <a class="dropdown-item" href="/Profile/profile.html">
+            <i class="fa-solid fa-user me-2"></i> View Profile
+          </a>
+        </li>
        
+        <li>
+          <a class="dropdown-item text-danger" href="#" id="logoutBtn" data-bs-toggle="modal" data-bs-target="#logoutModal">
+            <i class="fa-solid fa-arrow-right-from-bracket me-2"></i> Logout
+          </a>
+        </li>
+      </ul>
     </div>
-  </nav>
-   <div class="offcanvas offcanvas-start mobile-sidebar" tabindex="-1" id="mobileSidebar">
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+   <div class="offcanvas offcanvas-start mobile-sidebar bg-body-tertiary" tabindex="-1" id="mobileSidebar">
 
   <div class="offcanvas-header">
          <a href="/Home/Index.html" class="navbar-brand ">
@@ -53,7 +85,7 @@
         </div>
   <div class="offcanvas-body">
       
-          <ul class="nav flex-column">
+          <ul class="nav flex-column gap-3">
             <li class="nav-item ">
                    <a class="nav-link  " href="/Dashboard/dashboard.html">Dashboard</a>
                  </li>
@@ -74,10 +106,52 @@
                  </li>
                  
           </ul>
+           <hr >  
+        
+          <ul class="nav flex-column ">
+            
+            <li class="nav-item mb-2">
+              <a class="nav-link side" href="/Profile/profile.html">
+                <i class="fa-solid fa-circle-user pe-2"></i> Profile
+              </a>
+            </li>
+        
+            <li class="nav-item mb-2">
+              <a class="nav-link side logout-menu" href="index.html" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                <i class="fa-solid fa-arrow-right-from-bracket pe-2"></i> Logout
+              </a>
+            </li>
+          </ul>
         
         
         </div>
         </div>
+<div class="modal fade " id="logoutModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content logout-modal mx-auto">
+
+      <div class="modal-body text-center">
+        <div class="logout-icon mx-auto ">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h5 class="fw-bold mb-2">Are you leaving?</h5>
+        <p class="text-muted mb-4">Are you sure you want to log out? Your progress is saved and waiting for you when you return.</p>
+
+        <div class="d-flex gap-2 justify-content-center flex-wrap">
+          <button type="button" class="btn btn-light px-4 stay" data-bs-dismiss="modal">
+          Stay
+          </button>
+
+          <button type="button" class="btn px-4 logout" onclick="logout()">
+            <a href="/Home/Index.html" class="logout-link"> Log out</a>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
  
   
 
