@@ -38,11 +38,12 @@ function setActiveLink() {
     }
   });
 }
+
+
 function toggleChat() {
   const chat = document.getElementById("chatPopup");
   chat.style.display = chat.style.display === "flex" ? "none" : "flex";
 }
-
 
 function sendMessage() {
   const input = document.getElementById("chatInput");
@@ -51,7 +52,6 @@ function sendMessage() {
 
   if (message === "") return;
 
-
   const userMsg = document.createElement("p");
   userMsg.textContent = message;
   userMsg.style.textAlign = "right";
@@ -59,13 +59,15 @@ function sendMessage() {
 
   input.value = "";
 
-  
   setTimeout(() => {
     const botMsg = document.createElement("p");
     botMsg.textContent = "I'm just a demo 🤖";
     chatBody.appendChild(botMsg);
   }, 500);
 }
+
+
+
 
 
 const counters = document.querySelectorAll(".counter");
