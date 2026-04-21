@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/quizzes.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-logo">
+            <div class="logo-square">
+                <span>M</span>
+            </div>
+            <span class="logo-text">Masar</span>
+        </div>
+        <div id="welcomeScreen" class="quiz-screen active">
+            <h4 class="quiz-subtitle">Your First Step</h4>
+            <h1 class="quiz-title">Level Assessment Quiz</h1>
+            <p class="quiz-description">
+                Before you start your track, we'll do a short quiz to know your actual level 
+                and build you a suitable roadmap.
+            </p>
+
+            <div class="quiz-info-cards">
+                <div class="info-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>3 Levels</h3>
+                    <p>Beginner / Intermediate / Advanced</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>15 Minutes</h3>
+                    <p>Enough time without pressure</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>10 Questions</h3>
+                    <p>Covers basic programming concepts</p>
+                </div>
+            </div>
+
+            <div class="quiz-note">
+                <i class="fas fa-lightbulb"></i>
+                <p>There's no wrong answer — the goal is just to determine your actual level to provide the best learning experience.</p>
+            </div>
+
+            <button class="btn-start-quiz" onclick="startQuiz()">
+                Start Quiz <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+<div id="quizScreen" class="quiz-screen">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+                <div class="quiz-timer" id="timer">15:00</div>
+                <div class="quiz-question-count">Question <span id="currentQ">1</span> of <span id="totalQ">10</span></div>
+            </div>
+
+            <div class="question-container">
+                <h2 class="question-text" id="questionText">Loading...</h2>
+                <div class="answers-container" id="answersContainer"></div>
+            </div>
+
+            <div class="quiz-footer">
+                <button class="btn-prev" id="prevBtn" onclick="prevQuestion()">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <div class="score-counter">
+                    Answered: <span id="answeredCount">0</span> / 10
+                </div>
+                <button class="btn-next" id="nextBtn" onclick="nextQuestion()">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+</div>
+
+        <div id="resultsScreen" class="quiz-screen">
+            <div class="results-content">
+                <div class="score-circle">
+                    <span id="scorePercentage">0%</span>
+                </div>
+                <h2 id="levelResult">Beginner Level</h2>
+                <p id="levelDescription">Loading...</p>
+
+                <div class="result-recommendation">
+                    <h3><i class="fas fa-seedling"></i> Recommended Path</h3>
+                    <p id="recommendationText">Start your track from the beginning. We'll learn everything step by step.</p>
+                </div>
+
+                <div class="result-actions">
+                    <button class="btn-retake" onclick="retakeQuiz()">
+                        <i class="fas fa-redo"></i> Retake Quiz
+                    </button>
+                    <a href="../Roadmap/roadmap.html?track=backend" class="btn-roadmap" id="btnRoadmap">
+                        Start Skills Map <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+             </div>
+         </div>
+      </div>
+ <!-- <div id="chat-icon"></div> -->
+     <script src="../js/script.js"></script>
+     <script src="../js/quizzes.js"></script>
+     <script src="../js/start-quiz-data.js"></script>
+  <script src="/js/bootstrap.bundle.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+  AOS.init();
+</script>
+</body>
+</html>
