@@ -1,4 +1,6 @@
-const startQuizData = [
+//Level Assessment
+// Backend 
+window.startQuizData = [
     {
         question: "What does SQL stand for?",
         answers: [
@@ -7,7 +9,8 @@ const startQuizData = [
             "System Query Language",
             "Standard Query Language"
         ],
-        correct: 0
+        correct: 0,
+        topic: "Databases"
     },
     {
         question: "Which keyword is used to retrieve data from a database?",
@@ -17,7 +20,8 @@ const startQuizData = [
             "SELECT",
             "FETCH"
         ],
-        correct: 2
+        correct: 2,
+        topic: "Databases"
     },
     {
         question: "What is a Primary Key?",
@@ -27,7 +31,8 @@ const startQuizData = [
             "The first column in a table",
             "A password for the database"
         ],
-        correct: 1
+        correct: 1,
+        topic: "Databases"
     },
     {
         question: "Which SQL statement is used to update data?",
@@ -37,7 +42,8 @@ const startQuizData = [
             "UPDATE",
             "ALTER"
         ],
-        correct: 2
+        correct: 2,
+        topic: "Databases"
     },
     {
         question: "What does API stand for?",
@@ -47,7 +53,8 @@ const startQuizData = [
             "Application Process Integration",
             "Automated Programming Interface"
         ],
-        correct: 0
+        correct: 0,
+        topic: "Web Concepts"
     },
     {
         question: "Which HTTP method is used to send data to a server?",
@@ -57,7 +64,8 @@ const startQuizData = [
             "PUT",
             "DELETE"
         ],
-        correct: 1
+        correct: 1,
+        topic: "Web Concepts"
     },
     {
         question: "What is C#?",
@@ -67,7 +75,8 @@ const startQuizData = [
             "A web browser",
             "An operating system"
         ],
-        correct: 1
+        correct: 1,
+        topic: "Programming"
     },
     {
         question: "What does .NET stand for?",
@@ -77,7 +86,8 @@ const startQuizData = [
             "It's a brand name by Microsoft",
             "New Enhanced Technology"
         ],
-        correct: 2
+        correct: 2,
+        topic: "Programming"
     },
     {
         question: "Which of these is a relational database?",
@@ -87,7 +97,8 @@ const startQuizData = [
             "Redis",
             "Elasticsearch"
         ],
-        correct: 1
+        correct: 1,
+        topic: "Databases"
     },
     {
         question: "What is Entity Framework?",
@@ -97,16 +108,11 @@ const startQuizData = [
             "A testing framework",
             "A security framework"
         ],
-        correct: 1
+        correct: 1,
+        topic: "Programming"
     }
 ];
 
-initQuiz(startQuizData, 'backend');
-
 document.addEventListener('DOMContentLoaded', () => {
-    const btnRoadmap = document.getElementById('btnRoadmap');
-    if (btnRoadmap) {
-        const level = localStorage.getItem('quizLevel') || 'beginner';
-        btnRoadmap.href = `../Roadmap/roadmap.html?track=backend&level=${level}`;
-    }
+    initQuiz(startQuizData, 'backend');
 });

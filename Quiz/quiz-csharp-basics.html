@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSharp Basics Quiz - Masar</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/skill-quiz.css">
+</head>
+<body>
+    <div class="quiz-wrapper">
+        <aside class="quiz-sidebar">
+            <div class="sidebar-header">
+                <h3 class="sidebar-title">Quiz Information</h3>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Skill</span>
+                <span class="info-value">CSharp Basics</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Number of Questions</span>
+                <span class="info-value">10</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Success Rate</span>
+                <span class="info-value success-rate">90%</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Question Type</span>
+                <span class="info-value">MCQ</span>
+            </div>
+            <div class="sidebar-note">
+                <i class="fas fa-info-circle"></i>
+                Read each question carefully. You can return and modify your answers at any time before final submission.
+            </div>
+        </aside>
+        
+        <main class="quiz-main" id="quizMain">
+            <header class="quiz-header" id="quizHeader">
+                <div class="timer-container">
+                    <div class="quiz-timer" id="timer">15:00</div>
+                </div>
+                <div class="question-progress">
+                    <span class="question-counter">
+                        Question <span id="currentQ">1</span> of <span id="totalQ">10</span>
+                    </span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+                <div class="question-numbers" id="questionNumbers"></div>
+            </header>
+
+            <div class="question-container" id="questionContainer">
+                <h2 class="question-text" id="questionText">Loading...</h2>
+                <div class="answers-container" id="answersContainer"></div>
+            </div>
+
+            <footer class="quiz-footer" id="quizFooter">
+                <button class="btn-prev" id="prevBtn" onclick="prevQuestion()">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <div class="score-counter">
+                    Answered: <span id="answeredCount">0</span> / 10
+                </div>
+                <button class="btn-next" id="nextBtn" onclick="nextQuestion()">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+            </footer>
+        </main>
+    </div>
+
+    <script src="../js/skill-quiz.js"></script>
+    <script src="../js/Quiz/quiz-csharp-basics-data.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+</body>
+</html>
