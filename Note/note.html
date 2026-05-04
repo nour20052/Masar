@@ -1,22 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/css/bootstrap.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/note.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-    <title>Document</title>
+<title>My Notes — Masar</title>
 </head>
 <body>
-    <div id="navbar"></div>
-    <main class=""> gyhjgujhuioujoi</main>
+  <div id="navbar"></div>
+<div class="page">
+
+ 
+  <div class="page-header">
+    <h1 class="page-title text-center"><i class="fa-regular fa-note-sticky"></i> My Notes</h1>
+    <p class="page-subtitle text-center" >Organize your learning — linked to your roadmap progress.</p>
+  </div>
+
+  
+  <div class="stats-row" id="stats-row"></div>
+
+  
+  <div class="filter-bar">
+    <span class="filter-label"><i class="fa-solid fa-filter"></i> Filter</span>
+
+    <div class="filter-group">
+      <select class="filter-select" id="filter-section" onchange="renderAll()">
+        <option value="all">All Sections</option>
+      </select>
+
+      <div class="filter-divider"></div>
+
+      <select class="filter-select" id="filter-priority" onchange="renderAll()">
+        <option value="all">All Priorities</option>
+        <option value="high">🔴 High</option>
+        <option value="medium">🟡 Medium</option>
+        <option value="low">🟢 Low</option>
+      </select>
+    </div>
+
+    <div class="filter-divider"></div>
+
+    <div class="search-wrap">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input class="search-input" id="search-input" type="text" placeholder="Search notes…" oninput="renderAll()">
+    </div>
+
+    <button class="btn-reset" onclick="resetFilters()">
+      <i class="fa-solid fa-rotate-left"></i> Reset
+    </button>
+  </div>
+
+ 
+  <div id="notes-area"></div>
+
+</div>
+
+
+<div class="modal-overlay" id="modal-overlay" onclick="overlayClick(event)">
+  <div class="custom-modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title">
+        <i class="fa-regular fa-note-sticky"></i> New Note
+      </div>
+      <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label"><i class="fa-solid fa-heading"></i> Title</label>
+      <input class="form-input" id="form-title" placeholder="e.g. Types of JOINs in SQL" maxlength="100">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label"><i class="fa-solid fa-align-left"></i> Content</label>
+      <textarea class="form-textarea" id="form-content" placeholder="Write your note here…"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label"><i class="fa-solid fa-layer-group"></i> Roadmap Section</label>
+      <select class="form-select" id="form-section"></select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label"><i class="fa-solid fa-flag"></i> Priority</label>
+      <div class="priority-toggle">
+        <button class="p-btn sel-high"  id="pb-high"   onclick="selPri('high')">  <i class="fa-solid fa-circle-exclamation"></i> High</button>
+        <button class="p-btn"           id="pb-medium" onclick="selPri('medium')"><i class="fa-solid fa-circle-minus"></i> Medium</button>
+        <button class="p-btn"           id="pb-low"    onclick="selPri('low')">   <i class="fa-solid fa-circle-check"></i> Low</button>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-ghost"   onclick="closeModal()"><i class="fa-solid fa-xmark"></i> Cancel</button>
+      <button class="btn btn-primary" onclick="saveNote()"><i class="fa-solid fa-floppy-disk"></i> Save Note</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toast-wrap"></div>
+
 
  <div id="chat-icon"></div>
   <div id="footer"></div>
-    
-     <script src="/js/script.js"></script>
+  <script src="/js/note.js"></script>
+  <script src="/js/script.js"></script>
   <script src="/js/bootstrap.bundle.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
