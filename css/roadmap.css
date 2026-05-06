@@ -25,6 +25,7 @@
 }
 body {
     overflow-x: hidden;
+    padding-top: 40px;
 }
 html {
     scroll-behavior: smooth;
